@@ -12,7 +12,12 @@
             <h1>Calculadora</h1>
             <input id="num1" type="number">
             <input id="num2" type="number">
-            <button onclick="sum()">+</button>
+            <div>
+                <button onclick="calc('sum')">+</button>
+                <button onclick="calc('sub')">-</button>
+                <button onclick="calc('multi')">*</button>
+                <button onclick="calc('divi')">/</button>
+            </div>
             <input id="result" readonly>
         </div>
         <div class="history">

@@ -1,8 +1,18 @@
-function sum(){
-    let num1 = document.getElementById("num1").value;
-    let num2 = document.getElementById("num2").value;
+function calc(operation){
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let output;
 
-    let output = num1 + num2;
+    switch (operation) {
+        case 'sum': output = num1 + num2;
+        break;
+        case 'sub': output = num1 - num2;
+        break;
+        case 'multi': output = num1 * num2;
+        break;
+        case 'divi': output = num1 / num2;
+        break;
+    }
 
-    document.getElementById("result").value = result;
+    document.getElementById("result").value = output;
 }
