@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Plus</title>
+    <title>JS Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="calculator">
-            <h1>Calculadora</h1>
+            <object data="calc.svg" type="image/svg+xml"></object>
+            <h1>JS Calculator</h1>
             <input id="num1" type="number">
             <input id="num2" type="number">
             <div>
-                <button onclick="calc('sum')">+</button>
-                <button onclick="calc('sub')">-</button>
-                <button onclick="calc('multi')">*</button>
-                <button onclick="calc('divi')">/</button>
+                <button onclick="calc('+')">+</button>
+                <button onclick="calc('-')">-</button>
+                <button onclick="calc('*')">*</button>
+                <button onclick="calc('/')">/</button>
             </div>
             <input id="result" readonly>
         </div>
-        <div class="history">
+        <div class="calculator history">
+            <h1>History</h1>
+            <h2>10 latest operations:</h2>
+            <div id="history">
+            </div>
         </div>
+        
     </div>
 
     <script src="script.js"></script>

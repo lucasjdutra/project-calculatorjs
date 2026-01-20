@@ -4,15 +4,24 @@ function calc(operation){
     let output;
 
     switch (operation) {
-        case 'sum': output = num1 + num2;
+        case '+': output = num1 + num2;
         break;
-        case 'sub': output = num1 - num2;
+        case '-': output = num1 - num2;
         break;
-        case 'multi': output = num1 * num2;
+        case '*': output = num1 * num2;
         break;
-        case 'divi': output = num1 / num2;
+        case '/': output = num1 / num2;
         break;
     }
 
     document.getElementById("result").value = output;
+
+    let history = document.getElementById("history");
+    let newHistory = "<p>" + num1 + " " + operation + " " + num2 + " = " + output + "</p>";
+
+    history.innerHTML = newHistory + history.innerHTML;
+
+    if(history.children.length > 10) { //busca a quantidade de elementos-filho dentro do elemento history
+        history.removeChild(history.childNodes[10]); //remove o elemento-filho correspondente a posição 10 do array
+    }
 }
